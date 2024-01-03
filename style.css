@@ -1,0 +1,59 @@
+body{
+    background-image: url("/assets/msc-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(3px);
+}
+.title{
+    font-size: 40px;
+}
+/* CSS for ranking board */
+.ranking-board {
+    font-family: Arial, sans-serif;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+  /* CSS for table rows */
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #ccc;
+    align-items: center;
+}
+.row img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+  /* CSS for table headers */
+.row.header {
+    font-weight: bold;
+    background-color: #f0f0f0;
+}
+
+  /* CSS for table cells */
+.row > div {
+    flex-basis: calc(100% / 7); /* Equally distribute columns */
+    text-align: center;
+}
+
+  /* Specific cell styles */
+.rank {
+    flex-basis: calc(100% / 12); /* Adjust the width for rank column */
+}
+
+.delegations {
+    flex-basis: calc(100% / 3); /* Adjust the width for delegations column */
+}
+
+@media (max-width: 767px) {
+    .ranking-board .header {
+        font-size: 12px; /* Adjust the font size for header on small screens */
+    }
+    .ranking-board .row > div {
+        flex-basis: 100%; /* Full width for each column on small screens */
+    }
+}
