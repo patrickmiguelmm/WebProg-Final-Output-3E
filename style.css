@@ -168,3 +168,55 @@ background-color: #111;
         animation-fill-mode: both;
     }
 }
+/*CSS HOVER EFFECT*/
+.container {
+    font-family: Arial, sans-serif;
+}
+
+.row:not(.header):hover {
+    background: hsla(135, 39%, 35%, 1);
+    background: linear-gradient(270deg, hsla(135, 39%, 35%, 1) 33%, hsla(0, 70%, 53%, 1) 64%);
+    background: -moz-linear-gradient(270deg, hsla(135, 39%, 35%, 1) 33%, hsla(0, 70%, 53%, 1) 64%);
+    background: -webkit-linear-gradient(270deg, hsla(135, 39%, 35%, 1) 33%, hsla(0, 70%, 53%, 1) 64%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#367A47", endColorstr="#DB3232", GradientType=1 );
+    transition: background-color 0.3s ease-in-out;
+}
+
+.row:not(.header) {
+    cursor: pointer;
+}
+
+.row:not(.header):hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.row:not(.header) img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.row:not(.header) div {
+    padding: 10px;
+}
+
+.row:not(.header) div.rank {
+    font-weight: bold;
+}
+
+.row:not(.header) div.delegations {
+    flex-grow: 1;
+}
+
+.row:not(.header) div.sports,
+.row:not(.header) div.cultural,
+.row:not(.header) div.academics,
+.row:not(.header) div.total {
+    text-align: center;
+    font-weight: bold;
+}
